@@ -665,7 +665,6 @@ nav {
     line-height: 1.7;
     font-size: 1.1rem;
 }
-
 /* =========================
    ACHIEVEMENT SECTION
 ========================= */
@@ -696,16 +695,6 @@ nav {
 
 .achievement-image:hover {
   transform: scale(1.03);
-}
-@media (max-width: 768px) {
-  .achievement {
-    padding: 90px 16px;
-  }
-
-  .achievement-image {
-    max-width: 100%;
-    padding: 14px;
-  }
 }
 
 /* ============================
