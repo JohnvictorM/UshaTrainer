@@ -79,3 +79,44 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+const form = document.getElementById('form');
+const submitBtn = form.querySelector('button[type="submit"]');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Collect values from the form
+    const data = {
+        access_key: "dc8a8237-d122-4042-b081-65a1db594ddc",
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        message: form.message.value.trim()
+    };
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            alert("Success! Your message has been sent.");
+            form.reset();
+        } else {
+            alert("Error: " + result.message);
+        }
+
+    } catch (error) {
+        alert("Something went wrong. Please try again.");
+        console.error(error);
+    } finally {
+        submitBtn.textContent = "Send Message";
+        submitBtn.disabled = false;
+    }
+});

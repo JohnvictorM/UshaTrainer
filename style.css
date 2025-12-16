@@ -50,7 +50,7 @@ nav.scrolled {
   justify-content: space-between;
 }
 /* =========================
-   NAVBAR – FINAL PROFESSIONAL FIX
+   NAVBAR â€“ FINAL PROFESSIONAL FIX
 ========================= */
 
 nav {
@@ -94,7 +94,7 @@ nav {
 }
 
 
-/* LOGO – PROFESSIONAL SIZE */
+/* LOGO â€“ PROFESSIONAL SIZE */
 .logo img {
   height: 60px;          /* KEY FIX */
   width: auto;
@@ -194,7 +194,7 @@ nav {
     }
 }
 /* ==============================
-   NAVBAR – LARGE LOGO VERSION
+   NAVBAR â€“ LARGE LOGO VERSION
 ============================== */
 
 nav {
@@ -211,20 +211,20 @@ nav {
 .nav-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 28px 40px;   /* 🔥 INCREASED PADDING */
+  padding: 28px 40px;   /* ðŸ”¥ INCREASED PADDING */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* LOGO – BIG & BRAND-FOCUSED */
+/* LOGO â€“ BIG & BRAND-FOCUSED */
 .logo {
   display: flex;
   align-items: center;
 }
 
 .logo img {
-  height: 88px;        /* 🔥 BIG LOGO */
+  height: 88px;        /* ðŸ”¥ BIG LOGO */
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 4px 10px rgba(0,0,0,0.18));
@@ -354,7 +354,7 @@ nav {
 
 .hero-mixed {
     position: relative;
-    height: 100vh;
+    min-height: calc(100vh - 80px);
     width: 100%;
     display: flex;
     align-items: center;
@@ -366,6 +366,8 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     animation: slideshow 18s infinite ease-in-out;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 @keyframes slideshow {
@@ -843,6 +845,15 @@ nav {
 .portfolio-item:hover .portfolio-overlay {
     transform: translateY(0);
 }
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio {
+    position: relative;
+    z-index: 1;
+}
+
 
 /* ============================
    TESTIMONIALS SECTION
@@ -953,7 +964,7 @@ nav {
 }
 
 .pricing-features li:before {
-    content: "✓ ";
+    content: "âœ“ ";
     color: var(--lavender);
     font-weight: bold;
     margin-right: 10px;
@@ -1314,7 +1325,7 @@ section h2,
     align-items: center;
 }
 
-/* LOGO IMAGE – DESKTOP */
+/* LOGO IMAGE â€“ DESKTOP */
 .logo img {
     height: 56px;              /* Increased visibility */
     width: auto;
@@ -1342,4 +1353,153 @@ section h2,
   .certificate-image-wrapper {
     height: 190px;
   }
+}
+/* ============================
+   GLOBAL TEXT REFINEMENT
+============================ */
+
+/* Limit paragraph width for readability */
+.section-subtitle,
+.about-content p,
+.service-card p,
+.why-card p,
+.testimonial-card p,
+.pricing-features li,
+.cert-description {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================
+   SERVICES – CLEAN & PROFESSIONAL
+============================ */
+
+.service-card {
+    text-align: left;                /* professional alignment */
+}
+
+.service-icon {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-card h3 {
+    text-align: center;
+}
+
+.service-card p {
+    text-align: left;
+    line-height: 1.7;
+}
+
+/* ============================
+   WHY CHOOSE – READABLE CARDS
+============================ */
+
+.why-card {
+    text-align: left;
+}
+
+.why-icon {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.why-card h3 {
+    text-align: center;
+}
+
+.why-card p {
+    text-align: left;
+    line-height: 1.7;
+}
+
+/* ============================
+   PORTFOLIO OVERLAY TEXT
+============================ */
+
+.portfolio-overlay {
+    text-align: center;
+}
+
+.portfolio-overlay h4 {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+}
+
+.portfolio-overlay p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* ============================
+   TESTIMONIALS – POLISHED LOOK
+============================ */
+
+.testimonial-card {
+    text-align: left;
+}
+
+.testimonial-card p {
+    line-height: 1.75;
+}
+
+.client-name {
+    margin-top: 10px;
+    display: block;
+    text-align: right;
+}
+
+/* ============================
+   PRICING – STRUCTURED TEXT
+============================ */
+
+.pricing-card {
+    text-align: center;
+}
+
+.pricing-features {
+    margin-top: 20px;
+}
+
+.pricing-features li {
+    line-height: 1.6;
+}
+
+/* ============================
+   ABOUT SECTION – CLEAN FLOW
+============================ */
+
+.about-content {
+    text-align: left;
+}
+
+.about-content p {
+    max-width: 720px;
+}
+
+/* ============================
+   MOBILE TEXT BALANCE
+============================ */
+
+@media (max-width: 768px) {
+
+    .service-card,
+    .why-card,
+    .testimonial-card,
+    .about-content {
+        text-align: center;
+    }
+
+    .service-card p,
+    .why-card p,
+    .testimonial-card p,
+    .about-content p {
+        text-align: center;
+    }
+
+    .client-name {
+        text-align: center;
+    }
 }
